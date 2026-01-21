@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:53:46 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 11:01:09 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 11:28:03 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class	PhoneBook
 {
 private:
-	Contact	contacts[8];
+	Contact	_contacts[8];
 public:
 	void	search();
 	void 	add_user();
