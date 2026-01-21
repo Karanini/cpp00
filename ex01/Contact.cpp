@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 17:38:16 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 18:03:37 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ std::string	Contact::truncate_if_necessary(std::string field)
 */
 void	Contact::print_contact_info()
 {
+	std::cout << '\n';
 	std::cout << "first name: " << this->_first_name;
 	std::cout << '\n';
 	std::cout << "last name: " << this->_last_name;
@@ -76,5 +77,6 @@ void	Contact::print_contact_info()
 	std::cout << "phone number: " << this->_phone_number;
 	std::cout << '\n';
 	std::cout << "darkest secret: " << this->_darkest_secret;
+	std::cout << '\n';
 	std::cout << std::endl;
 }
