@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 18:03:37 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 18:07:44 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	Contact::create_new_contact()
     std::getline(std::cin, this->_first_name);
     std::cout << "Enter last name:\n";
     std::getline(std::cin, this->_last_name);
-    std::cout << "Enter _nickname:\n";
+    std::cout << "Enter nickname:\n";
     std::getline(std::cin, this->_nickname);
     std::cout << "Enter phone number:\n";
     std::getline(std::cin, this->_phone_number);
