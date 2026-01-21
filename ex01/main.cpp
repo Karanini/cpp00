@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:12:58 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 14:58:00 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:16:59 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main()
 		}
 		else if (!user_input.compare("SEARCH"))
 		{
-			std::cout << "Search mode activated.\n";
+			phonebook.search();
 		}
 		else if (!user_input.compare("EXIT"))
 		{

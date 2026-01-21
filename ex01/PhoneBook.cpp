@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:05:43 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 15:14:43 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:23:09 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,19 @@ void	PhoneBook::add_user()
 	this->_contacts[this->_i] = new_contact;
 	// this->_contacts[this->_i].print_contact_info();
 	this->_i++;
+}
+
+void	PhoneBook::search()
+{
+	int	num_contacts;
+
+	// if (this->_i)
+	num_contacts = this->_i;
+	while (num_contacts > 0)
+	{
+		std::cout << std::setfill (' ') << std::setw (10);
+		std::cout << num_contacts - 1;
+		// this->_contacts[num_contacts - 1].display_for_search();
+		num_contacts--;
+	}
 }
