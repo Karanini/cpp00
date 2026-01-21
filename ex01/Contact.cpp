@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 15:14:03 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:26:50 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,6 @@ void	Contact::create_new_contact()
     std::getline(std::cin, this->_phone_number);
     std::cout << "What is your contact's DARKEST secret ?\n";
 	std::getline(std::cin, this->_darkest_secret);
-
-	// std::cout << "first name=" << this->_first_name;
-	// std::cout << '\n';
-	// std::cout << this->_last_name;
-	// std::cout << '\n';
-	// std::cout << this->_nickname;
-	// std::cout << '\n';
-	// std::cout << this->_phone_number;
-	// std::cout << '\n';
-	// std::cout << this->_darkest_secret;
 }
 
 int		Contact::is_not_valid_entry()
