@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 16:31:29 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:18:33 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,12 @@ int		Contact::is_not_valid_entry()
 */
 void	Contact::display_for_search()
 {
-	std::cout << std::setfill ('x') << std::setw (10);
+	std::cout << std::setfill (' ') << std::setw (10);
 	std::cout << this->_first_name << '|';
+	std::cout << std::setfill (' ') << std::setw (10);
+	std::cout << this->_last_name << '|';
+	std::cout << std::setfill (' ') << std::setw (10);
+	std::cout << this->_nickname << std::endl;
 }
 
 /*

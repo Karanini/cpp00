@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:05:43 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 16:27:55 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:17:08 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,11 @@ void	PhoneBook::search()
 {
 	int	num_contacts;
 
-	// if (this->_i)
+	if (this->_i == 0)
+	{
+		std::cout << "No contacts to display." << std::endl;
+		return ;
+	}
 	num_contacts = this->_i;
 	while (num_contacts > 0)
 	{
