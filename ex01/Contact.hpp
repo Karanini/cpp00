@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:54:36 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/20 17:56:17 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 10:53:26 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CONTACT_HPP
 
 #include <iostream>
+#include <string>
+#include <climits>
 
 class	Contact
 {
