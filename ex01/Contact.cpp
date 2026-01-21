@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 17:18:33 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:38:16 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,21 @@ int		Contact::is_not_valid_entry()
 void	Contact::display_for_search()
 {
 	std::cout << std::setfill (' ') << std::setw (10);
-	std::cout << this->_first_name << '|';
+	std::cout << this->truncate_if_necessary(this->_first_name) << '|';
 	std::cout << std::setfill (' ') << std::setw (10);
-	std::cout << this->_last_name << '|';
+	std::cout << this->truncate_if_necessary(this->_last_name) << '|';
 	std::cout << std::setfill (' ') << std::setw (10);
-	std::cout << this->_nickname << std::endl;
+	std::cout << this->truncate_if_necessary(this->_nickname) << std::endl;
+}
+
+std::string	Contact::truncate_if_necessary(std::string field)
+{
+	if (field.size() > 10)
+	{
+		field.resize(9);
+		field.push_back('.');
+	}
+	return (field);
 }
 
 /*
