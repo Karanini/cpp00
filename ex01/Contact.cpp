@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 16:26:50 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:31:29 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,23 @@ int		Contact::is_not_valid_entry()
 		return (1);
 	return (0);
 }
+/*
+* displays first name, last name and nickname of a contact on a single
+* line, according to the format required by the subject
+*
+* be careful of the pipe it's NOT INCLUDED in the 10 chars limit but setw
+* might take it into account
+*/
+void	Contact::display_for_search()
+{
+	std::cout << std::setfill ('x') << std::setw (10);
+	std::cout << this->_first_name << '|';
+}
 
+/*
+* prints contact details, one line per field, once the user entered
+* the contact's index in stdin
+*/
 void	Contact::print_contact_info()
 {
 	std::cout << "first name: " << this->_first_name;
