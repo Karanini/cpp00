@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:12:58 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 10:53:37 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 11:09:05 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main()
 {
 	Contact	new_contact;
+	PhoneBook	phonebook;
 	std::string	user_input;
 
 	while (true)
@@ -24,7 +25,8 @@ int	main()
 		std::cin.ignore(INT_MAX, '\n');
 		if (!user_input.compare("ADD"))
 		{
-			new_contact.add_user();
+			// new_contact.add_user();
+			phonebook.add_user();
 		}
 		else if (!user_input.compare("SEARCH"))
 		{
