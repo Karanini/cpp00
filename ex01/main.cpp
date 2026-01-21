@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:12:58 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 11:09:05 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/21 14:58:00 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main()
 {
 	Contact	new_contact;
-	PhoneBook	phonebook;
+	PhoneBook	phonebook(0);
 	std::string	user_input;
 
 	while (true)
