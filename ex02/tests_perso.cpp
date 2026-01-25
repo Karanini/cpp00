@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:38:23 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 15:47:20 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 16:26:10 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ int main(void)
 	Account	Michel = Account(4000);
 
 	Account::displayAccountsInfos();
+	Bob.makeDeposit(5);
 }

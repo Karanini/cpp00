@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:28:09 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 15:54:11 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 16:26:36 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,16 @@ Account::Account(int initial_deposit)
 Account::~Account()
 {
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";closed" << std::endl;
+}
+//index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
+void	Account::makeDeposit(int deposit)
+{
+	this->_amount += deposit;
+	this->_nbDeposits++;
+
+	std::cout << "index:" << this->_accountIndex;
+	std::cout << ";p_amount:" << this->_amount - deposit;
+	std::cout << ";deposit:" << deposit;
+	std::cout << ";amount:" << this->_amount;
+	std::cout << ";nb_deposits:" << this->_nbDeposits << std::endl;
 }
