@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:28:09 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 16:26:36 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 16:55:16 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	Account::getNbWithdrawals()
 // accounts:8;total:20049;deposits:0;withdrawals:0
 void	Account::displayAccountsInfos()
 {
+	Account::_displayTimestamp();
 	std::cout << "accounts:" << getNbAccounts();
 	std::cout << ";total:" << getTotalAmount();
 	std::cout << ";deposits:" << getNbDeposits();
@@ -57,22 +58,39 @@ Account::Account(int initial_deposit)
 	_nbAccounts++;
 	_totalAmount += this->_amount;
 
+	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";created" << std::endl;
 }
 
 Account::~Account()
 {
+	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";closed" << std::endl;
 }
+
 //index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
 void	Account::makeDeposit(int deposit)
 {
 	this->_amount += deposit;
 	this->_nbDeposits++;
 
+	Account::_displayTimestamp();
 	std::cout << "index:" << this->_accountIndex;
 	std::cout << ";p_amount:" << this->_amount - deposit;
 	std::cout << ";deposit:" << deposit;
 	std::cout << ";amount:" << this->_amount;
 	std::cout << ";nb_deposits:" << this->_nbDeposits << std::endl;
+}
+
+//[19920104_091532]
+void	Account::_displayTimestamp(void)
+{
+	char output[19];
+
+	// Get the timestamp for the current date and time
+	time_t timestamp = time(NULL);
+	struct tm datetime = *localtime(&timestamp);
+	strftime(output, sizeof(output), "[%Y%m%d_%H%M%S] ", &datetime);
+	// Display the date and time represented by the timestamp
+	std::cout << output;
 }
