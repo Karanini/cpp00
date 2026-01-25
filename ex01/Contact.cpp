@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 18:07:44 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 11:32:26 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	Contact::create_new_contact()
 	std::getline(std::cin, this->_darkest_secret);
 }
 
-int		Contact::is_not_valid_entry()
+int		Contact::is_not_valid_entry() const
 {
 	if (!this->_first_name.compare("") || !this->_last_name.compare("")
 		|| !this->_nickname.compare("") || !this->_phone_number.compare("")
@@ -65,7 +65,7 @@ std::string	Contact::truncate_if_necessary(std::string field)
 * prints contact details, one line per field, once the user entered
 * the contact's index in stdin
 */
-void	Contact::print_contact_info()
+void	Contact::print_contact_info() const
 {
 	std::cout << '\n';
 	std::cout << "first name: " << this->_first_name;

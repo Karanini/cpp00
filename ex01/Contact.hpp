@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:54:36 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 17:32:33 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 11:32:17 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ private:
 	std::string	_darkest_secret;
 public:
 	void	create_new_contact();
-	int		is_not_valid_entry();
+	int		is_not_valid_entry() const;
 	void	display_for_search();
 	std::string	truncate_if_necessary(std::string field);
-	void	print_contact_info();
+	void	print_contact_info() const;
 };
 
 #endif
