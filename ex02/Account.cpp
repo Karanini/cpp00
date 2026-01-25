@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 15:28:09 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 16:55:16 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 17:03:08 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,28 @@ void	Account::makeDeposit(int deposit)
 	std::cout << ";deposit:" << deposit;
 	std::cout << ";amount:" << this->_amount;
 	std::cout << ";nb_deposits:" << this->_nbDeposits << std::endl;
+}
+// [19920104_091532] index:0;p_amount:47;withdrawal:refused
+// [19920104_091532] index:1;p_amount:819;withdrawal:34;amount:785;nb_withdrawals:1
+bool	Account::makeWithdrawal(int withdrawal)
+{
+	Account::_displayTimestamp();
+	std::cout << "index:" << this->_accountIndex;
+	std::cout << ";p_amount:" << this->_amount;
+	if (this->_amount < withdrawal)
+	{
+		std::cout << ";withdrawal:refused" << std::endl;
+		return (false);
+	}
+	else
+	{
+		this->_amount -= withdrawal;
+		this->_nbWithdrawals++;
+		std::cout << ";withdrawal:" << withdrawal;
+		std::cout << ";amount:" << this->_amount;
+		std::cout << ";nb_withdrawals:" << this->_nbWithdrawals << std::endl;
+		return (true);
+	}
 }
 
 //[19920104_091532]
