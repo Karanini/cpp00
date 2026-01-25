@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:05:43 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 10:59:55 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/25 11:01:31 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	PhoneBook::add_user()
 	if (this->_i == 8)
 		this->_i = 0;
 	this->_contacts[this->_i] = new_contact;
-	// this->_contacts[this->_i].print_contact_info();
 	this->_i++;
 	if (this->_num_contacts < 8)
 		this->_num_contacts++;
