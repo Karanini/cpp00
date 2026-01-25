@@ -6,7 +6,7 @@
 #    By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 14:08:56 by bkaras-g          #+#    #+#              #
-#    Updated: 2026/01/25 16:19:29 by bkaras-g         ###   ########.fr        #
+#    Updated: 2026/01/25 17:10:48 by bkaras-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 NAME = account
 
 SRC = Account.cpp \
-		tests_perso.cpp
+		tests.cpp
 
 HEADERS = Account.hpp
 
