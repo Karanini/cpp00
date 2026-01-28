@@ -6,12 +6,17 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:53:46 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 11:32:43 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/01/28 12:27:26 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+
+#include <iostream>
+#include <string>
+#include <climits>
+#include <iomanip>
 
 #include "Contact.hpp"
 
