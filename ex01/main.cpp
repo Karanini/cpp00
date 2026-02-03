@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:12:58 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/21 16:16:59 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/02/03 13:25:51 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,14 @@ int	main()
 	{
 		std::cout << "Hi! Welcome to the super Phone Book app! What do you want do to today ?\n";
 		std::cin >> user_input;
+		if (std::cin.eof())
+        {
+            std::cout << "\nExiting due to Ctrl+D..." << std::endl;
+            break;
+        }
 		std::cin.ignore(INT_MAX, '\n');
 		if (!user_input.compare("ADD"))
 		{
-			// new_contact.add_user();
 			phonebook.add_user();
 		}
 		else if (!user_input.compare("SEARCH"))
