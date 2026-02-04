@@ -6,24 +6,30 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:06:18 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/25 11:32:26 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/02/04 15:19:52 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+static void	get_field(const std::string &prompt, std::string &field)
+{
+	std::cout << prompt << '\n';
+ 	std::getline(std::cin, field);
+	if (std::cin.eof())
+	{
+		std::cout << "Exiting due to Ctrl+D..." << std::endl;
+		exit(1);
+	}
+}
+
 void	Contact::create_new_contact()
 {
-	std::cout << "Enter first name:\n";
-    std::getline(std::cin, this->_first_name);
-    std::cout << "Enter last name:\n";
-    std::getline(std::cin, this->_last_name);
-    std::cout << "Enter nickname:\n";
-    std::getline(std::cin, this->_nickname);
-    std::cout << "Enter phone number:\n";
-    std::getline(std::cin, this->_phone_number);
-    std::cout << "What is your contact's DARKEST secret ?\n";
-	std::getline(std::cin, this->_darkest_secret);
+	get_field("Enter first name:", this->_first_name);
+    get_field("Enter last name:", this->_last_name);
+    get_field("Enter nickname:", this->_nickname);
+    get_field("Enter phone number:", this->_phone_number);
+    get_field("What is your contact's DARKEST secret ?", this->_darkest_secret);
 }
 
 int		Contact::is_not_valid_entry() const

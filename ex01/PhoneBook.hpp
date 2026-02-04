@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:53:46 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/01/28 12:27:26 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/02/04 14:57:49 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <climits>
+#include <cstdlib>
 #include <iomanip>
 
 #include "Contact.hpp"

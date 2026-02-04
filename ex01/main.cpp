@@ -6,7 +6,7 @@
 /*   By: bkaras-g <bkaras-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 17:12:58 by bkaras-g          #+#    #+#             */
-/*   Updated: 2026/02/03 14:00:37 by bkaras-g         ###   ########.fr       */
+/*   Updated: 2026/02/04 14:59:22 by bkaras-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main()
 		std::getline(std::cin, user_input); //instead of std::cin >> user_input; to be able to catch an empty line
 		if (std::cin.eof())
 		{
-			std::cout << "\nExiting due to Ctrl+D..." << std::endl;
+			std::cout << "Exiting due to Ctrl+D..." << std::endl;
 			break;
 		}
 		if (user_input.empty())
